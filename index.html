@@ -50,19 +50,16 @@
             <div class="form-group row">
                 <div class="mb-3 col-6">
                     <label for="country" class="form-label">Kraj</label>
-                    <select class="form-select" id="country" required>
-                        <option value="">Wybierz kraj</option>
+                    <input list="countriesList" class="form-control" id="country" placeholder="Wpisz kraj" required>
+                    <datalist id="countriesList">
                         <!-- Options will be filled by JavaScript -->
-                    </select>
+                    </datalist>
+                   
                 </div>
                 <div class="row mb-3 col-6">
                     <label for="phoneNumber" class="form-label">Numer telefonu komórkowego</label>
                     <div class="input-group">
                         <select class="form-select" id="countryCode" aria-label="Wybierz numer kierunkowy">
-                            <option selected>Wybierz...</option>
-                            <option value="+48">+48 (Polska)</option>
-                            <option value="+1">+1 (Stany Zjednoczone)</option>
-                            <!-- Dodaj więcej opcji, jeśli jest to potrzebne -->
                         </select>
                         <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy"
                             required>
@@ -71,15 +68,39 @@
             </div>
 
             <div class="form-group row">
-                <div class="mb-3 col-6">
+                <div class="mb-3">
                     <label for="shippingMethod" class="form-label">Rodzaj przesyłki</label>
-                    <select class="form-select" id="shippingMethod" required>
-                        <option value="">Wybierz rodzaj przesyłki</option>
-                        <option value="DPD">DPD</option>
-                        <option value="InPost">InPost</option>
-                    </select>
+                    <div id="shippingMethodOptions" class="input-group justify-content-between">
+                        <div class="form-check">
+                            <input type="radio" id="shippingDPD" class="form-check-radio" name="shippingMethod" value="DPD">
+                            <img src="img/dpd.png" alt="DPD" class="logo"> 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="shippingInPost" class="form-check-radio" name="shippingMethod" value="InPost">
+                            <img src="img/inpost.png" alt="InPost" class="logo"> 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="shippingInPost" class="form-check-radio" name="shippingMethod" value="GLS">
+                            <img src="img/gls.png" alt="GLS" class="logo"> 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="shippingInPost" class="form-check-radio" name="shippingMethod" value="PocztaPolska">
+                            <img src="img/poczta.png" alt="Poczta Polska" class="logo"> 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="shippingInPost" class="form-check-radio" name="shippingMethod" value="FedEx">
+                            <img src="img/fedex.png" alt="FedEx" class="logo"> 
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="shippingInPost" class="form-check-radio" name="shippingMethod" value="Pocztex">
+                            <img src="img/pocztex.png" alt="Pocztex" class="logo"> 
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3 col-6">
+            </div>
+
+            <div class="form-group row">
+                <div class="mb-3">
                     <label for="paymentMethod" class="form-label">Rodzaj płatności</label>
                     <select class="form-select" id="paymentMethod" required>
                         <option value="">Wybierz rodzaj płatności</option>
