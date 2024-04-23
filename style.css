@@ -6,8 +6,12 @@
     padding-left: 0;
 }
 
-/* Stylowanie obrazka */
 .logo {
-    vertical-align: middle; /* Wyśrodkowanie obrazka w pionie */
-    height: 20px; /* Ustawienie wysokości obrazka */
+    vertical-align: middle;
+    height: 20px; 
 }
+
+#paymentBlik::placeholder {
+    text-align: center;
+}
+
