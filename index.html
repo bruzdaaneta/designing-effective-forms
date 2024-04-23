@@ -21,36 +21,42 @@
             <div class="form-group row">
                 <div class="mb-3 col-6">
                     <label for="firstName" class="form-label">Imię</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Wpisz imię" required>
+                    <input type="text" class="form-control next-input" id="firstName" placeholder="Wpisz imię" required name="name_input">
+                    <span class="error-message error" id="name-error"></span>
                 </div>
                 <div class="mb-3 col-6">
                     <label for="lastName" class="form-label">Nazwisko</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Wpisz nazwisko" required>
+                    <input type="text" class="form-control next-input" id="lastName" placeholder="Wpisz nazwisko" required name="surname_input">
+                    <span class="error-message error" id="surname-error"></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="mb-3">
                     <label for="street" class="form-label">Ulica</label>
-                    <input type="text" class="form-control" id="street" placeholder="Wpisz ulicę" required>
+                    <input type="text" class="form-control next-input" id="street" placeholder="Wpisz ulicę" required name="street_input">
+                    <span class="error-message error" id="street-error"></span>
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="mb-3 col-6">
                     <label for="zipCode" class="form-label">Kod pocztowy</label>
-                    <input type="text" class="form-control" id="zipCode" placeholder="Wpisz kod pocztowy" required>
+                    <input type="text" class="form-control next-input" id="zipCode" placeholder="Wpisz kod pocztowy" required name="zipCode_input">
+                    <span class="error-message error" id="zipCode-error"></span>
                 </div>
                 <div class="mb-3 col-6">
                     <label for="city" class="form-label">Miasto</label>
-                    <input type="text" class="form-control" id="city" placeholder="Wpisz miasto" required>
+                    <input type="text" class="form-control next-input" id="city" placeholder="Wpisz miasto" required name="city_input">
+                    <span class="error-message error" id="city-error"></span>
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="mb-3 col-6">
                     <label for="country" class="form-label">Kraj</label>
-                    <input list="countriesList" class="form-control" id="country" placeholder="Wpisz kraj" required>
+                    <input list="countriesList" class="form-control" id="country" placeholder="Wpisz kraj" required name="country_input">
+                    <span class="error-message error" id="country-error"></span>
                     <datalist id="countriesList">
                         <!-- Options will be filled by JavaScript -->
                     </datalist>
@@ -64,8 +70,9 @@
                             </select>
                         </div>
                         <div class="col-8">
-                            <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy"
-                            required>
+                            <input type="text" class="form-control next-input" id="phoneNumber" placeholder="Wpisz numer komórkowy"
+                            required name="phoneNumber_input">
+                            <span class="error-message error" id="phoneNumber-error"></span>
                         </div>
                     </div>
                 </div>
@@ -76,7 +83,7 @@
                     <label for="shippingMethod" class="form-label">Rodzaj przesyłki</label>
                     <div id="shippingMethodOptions" class="input-group justify-content-between">
                         <div class="form-check">
-                            <input type="radio" id="shippingDPD" class="form-check-radio" name="shippingMethod" value="DPD">
+                            <input type="radio" id="shippingDPD" class="form-check-radio" name="shippingMethod" value="DPD" checked>
                             <img src="img/dpd.png" alt="DPD" class="logo"> 
                         </div>
                         <div class="form-check">
@@ -109,7 +116,7 @@
                     <div id="paymentMethodOptions" class="row align-items-center justify-content-center">
                         <div class="col-6 d-flex justify-content-between">
                             <div class="form-check">
-                                <input type="radio" id="paymentCard" class="form-check-radio" name="paymentMethod" value="Karta">
+                                <input type="radio" id="paymentCard" class="form-check-radio" name="paymentMethod" value="Karta" checked>
                                 <label for="paymentCard" class="form-label m-0">Karta</label>
                             </div>
                             <div class="form-check">
@@ -133,24 +140,25 @@
             <div class="form-group row">
                 <div class="mb-3 col-6">
                     <label for="vatNumber" class="form-label">VAT Number</label>
-                    <input type="text" class="form-control" id="vatNumber" aria-describedby="vatHelp">
-                    <div id="vatHelp" style="font-size: 10px; " class="form-text">Kod kraju państwa członkowskiego i seria cyfr unikalnych dla tego
-                        podmiotu gospodarczego.</div>
+                    <input type="text" class="form-control next-input" id="vatNumber" aria-describedby="vatHelp" name="vatNumber_input">
+                    <span class="error-message error" id="vatNumber-error"></span>
+                    <div id="vatHelp" style="font-size: 10px; " class="form-text">Kod kraju państwa członkowskiego i seria cyfr unikalnych dla tego podmiotu gospodarczego.</div>
                 </div>
                 <div class="mb-3 col-6">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <input type="email" class="form-control next-input" id="exampleInputEmail1" name="email_input">
+                    <span class="error-message error" id="email-error"></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="mb-3">
                     <label for="invoiceData" class="form-label">Dane do faktury</label>
-                    <textarea class="form-control" id="invoiceData" rows="3" placeholder="Wpisz dane do faktury"></textarea>
+                    <textarea class="form-control next-input" id="invoiceData" rows="3" placeholder="Wpisz dane do faktury"></textarea>
                 </div>
             </div>
             
-            <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+            <button type="submit" class="btn btn-primary next-input" data-bs-toggle="modal"
                 data-bs-target="#form-feedback-modal">submit</button>
         </form>
     </div>
