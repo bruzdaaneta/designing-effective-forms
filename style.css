@@ -21,4 +21,37 @@
     font-size: 11px;
 }
 
+.form-label,
+.form-control,
+.form-select,
+.error-message,
+.modal-title,
+.modal-body p {
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+#vatNumber,
+#exampleInputEmail1,
+#invoiceData {
+    width: calc(100% - 20px);
+}
+
+.btn-primary {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.modal-title {
+    font-size: 18px;
+}
+
+.modal-body p {
+    font-size: 14px;
+}
+
+
 

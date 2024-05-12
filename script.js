@@ -377,7 +377,6 @@ submitButton.addEventListener('click', (e) => {
     }
 });
 
-
 (() => {
     // nasłuchiwania na zdarzenie kliknięcia myszką
     document.addEventListener('click', handleClick);
@@ -386,7 +385,6 @@ submitButton.addEventListener('click', (e) => {
     countryInput.addEventListener('change', disableUEVat);
     countryInput.addEventListener('change', fillInvoiceData);
     vatNumberInput.addEventListener('change', fillInvoiceData);
-   
 })()
 
 
